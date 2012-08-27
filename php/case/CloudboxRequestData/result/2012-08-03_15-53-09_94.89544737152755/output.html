@@ -1,0 +1,10 @@
+<script type="text/javascript" src="http://img.baidu.com/js/tangram-base-1.5.2.2.js"></script>
+<script>
+baidu.ajax.get("getpic.php",function(xhr,response) {
+	if (response!=""){
+		var img = document.createElement("img");
+		img.src = response;
+		document.body.appendChild(img);
+	}
+});
+</script>

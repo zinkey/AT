@@ -1,0 +1,196 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="tangram-1.5.2.2.js"></script>
+	<script src = "ace-template.js"></script>
+	<script src = "ace-yayaevent.js"></script>
+	<style>
+		html,body{
+			font-family:Arial,Helvetica,'Lucida Grande','Liberation Sans',FreeSans,sans-serif;
+		}
+		#main{
+			margin:0 auto;
+			width:80%;
+		}
+		.listname{
+			margin:30px;	
+		}
+		iframe{
+			border:none;
+		}
+		.name{
+			cursor:pointer;
+			border:1px dotted green;
+			padding:5px;
+			color:gray;
+			font-size: 15px;
+			border-radius:3px;
+		}
+	
+		.nameselected{
+			background:orange;
+			color:#fff;
+		}
+		.detail{
+			margin:5px 0 0 0px;
+			font-size:12px;
+			background:#eee;
+			padding:10px;
+			border-radius:5px;
+		}
+		.title{
+			font-size:30px;
+			color:rgb(138,172,2);
+			text-align:center;
+		}
+		iframe{
+			width:100%;
+			height:500px;
+		}
+		.nametip{
+			font-size:12px;
+			margin-left:20px;
+			color:rgb(138,172,2);
+			line-height:17px;
+			position:relative;
+		}
+		.nametip img{
+			width:15px;
+		}
+		.result{
+			border:1px solid #eee;
+		}
+	</style>
+</head>
+<body>
+<div class="title">AT平台</div>
+<iframe id="result" style="display:none;"></iframe>
+
+<div id="main">
+	<script type="ace-template" id="list">
+		for (var i=0;i<list.length;i++){
+			<div class="listname">
+				<span class="name" id="name_#{list[i].name}" action="name-action"  name="#{list[i].name}" title="点击运行#{list[i].name}">#{list[i].name}</span><span id="tip_#{list[i].name}" class="nametip"></span>
+				<div class="detail">#{list[i].readme==""?"无说明":list[i].readme}</div>
+				<div id="result_#{list[i].name}" class="result"></div>
+			</div>
+		}
+	</script>
+</div>
+
+
+
+
+</body>
+<script>
+
+	var url = "http://172.22.224.48:1111/";
+	var outputphp = "output.php";
+	var getcasephp = "getcase.php";
+
+
+
+	var name="";
+	var timer=null;
+	var timer2=null;
+
+	var requestserver = function(){
+		baidu.sio.callByBrowser(url+"?name="+encodeURIComponent(name),function(){
+		if (isrun){
+			baidu.g("tip_"+name).innerHTML = "服务器忙，自动等候中..."+"<img src='loadinfo.net (2).gif'/>";
+			timer2 = setTimeout(requestserver,3000);
+		}
+		else{
+			baidu.g("tip_"+name).innerHTML = "服务运行成功，请稍等结果..."+"<img src='loadinfo.net (2).gif'/>";
+			getOutput();
+		}
+		},{
+			timeOut:10000,
+			onfailure:function(){
+				baidu.g("tip_"+name).innerHTML = "服务器出错了...";
+			},
+			charset:"utf-8"
+		});
+	};
+
+	YayaEvent.bind({
+		"name-action":{
+			"click":function(){
+				clearTimeout(timer);
+				clearTimeout(timer2);
+				if (name)
+				{
+					baidu.dom.removeClass("name_"+name, "nameselected");
+					baidu.g("tip_"+name).innerHTML = "";
+				}
+	
+				name = this.getAttribute("name");
+
+				baidu.dom.addClass("name_"+name, "nameselected");
+				baidu.g("tip_"+name).innerHTML = "发送请求中..."+"<img src='loadinfo.net (2).gif'/>";
+				baidu.g("result_"+name).innerHTML = "";
+				requestserver();
+			},
+			"mouseover":function(){
+				baidu.dom.addClass("name_"+this.getAttribute("name"), "nameselected");
+			},
+			"mouseout":function(){
+				var tempn = this.getAttribute("name");
+				if (tempn!=name)
+				{
+					baidu.dom.removeClass("name_"+tempn, "nameselected");
+				}
+			}
+		}
+	});
+
+
+	baidu.ajax.get(getcasephp,function(xhr,response){
+
+		var list = eval(response);
+		baidu.g("main").innerHTML = AceTemplate.format("list",{
+			list:list
+		});
+
+
+	});
+
+
+
+	var getOutput = function(){
+
+		var key  = baidu.date.format(new Date(),"yyyy-MM-dd_HH-mm-ss")+"_"+Math.random()*100;
+		var tempname = name;
+		baidu.ajax.request(outputphp+"?name="+tempname+"&key="+key,{
+			timeout:10000,
+			onsuccess:function(xhr,response){
+				if (tempname!=name)
+				{
+					return;
+				}
+				if (response=="ok"){
+					baidu.g("tip_"+name).innerHTML = "服务运行完成";
+					var src = "case/"+name+"/result/"+key+"/output.html";
+					baidu.g("result_"+name).innerHTML = '<iframe src="'+src+'"></iframe>';
+				}
+				else{
+					timer = setTimeout(function(){
+						getOutput();
+					},1000);
+				}
+			},
+			onfailure:function(){
+				if (tempname!=name)
+				{
+					return;
+				}
+				getOutput();
+			}
+		});
+	};
+
+
+
+</script>
+</html>

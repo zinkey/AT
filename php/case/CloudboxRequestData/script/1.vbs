@@ -1,0 +1,1 @@
+CreateObject("WScript.Shell").run "baidubrowser.exe.lnk" ,3,ture

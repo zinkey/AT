@@ -1,0 +1,172 @@
+ml><head>
+    
+
+    <title>browser_compile [Hudson]</title><link rel="stylesheet" type="text/css" href="/hudson/static/9db53190/css/style.css" /><link rel="stylesheet" type="text/css" href="/hudson/static/9db53190/css/color.css" /><link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/hudson/static/9db53190/favicon.ico" /><script>var isRunAsTest=false; var rootURL="/hudson";</script><script src="/hudson/static/9db53190/scripts/prototype.js" type="text/javascript"></script><script src="/hudson/static/9db53190/scripts/behavior.js" type="text/javascript"></script><script src="/hudson/static/9db53190/scripts/sortable.js" type="text/javascript"></script><script src="/hudson/static/9db53190/scripts/jquery-1.5.1.min.js" type="text/javascript"></script><script src="/hudson/static/9db53190/scripts/jquery.blockUI.js" type="text/javascript"></script><script src="/hudson/static/9db53190/scripts/yui/yahoo/yahoo-min.js"></script><script src="/hudson/static/9db53190/scripts/yui/dom/dom-min.js"></script><script src="/hudson/static/9db53190/scripts/yui/event/event-min.js"></script><script src="/hudson/static/9db53190/scripts/yui/animation/animation-min.js"></script><script src="/hudson/static/9db53190/scripts/yui/dragdrop/dragdrop-min.js"></script><script src="/hudson/static/9db53190/scripts/yui/container/container-min.js"></script><script src="/hudson/static/9db53190/scripts/yui/connection/connection-min.js"></script><script src="/hudson/static/9db53190/scripts/yui/autocomplete/autocomplete-min.js"></script><script src="/hudson/static/9db53190/scripts/yui/menu/menu-min.js"></script><script src="/hudson/static/9db53190/scripts/yui/element/element-beta-min.js"></script><script src="/hudson/static/9db53190/scripts/yui/button/button-min.js"></script><script src="/hudson/static/9db53190/scripts/hudson-behavior.js" type="text/javascript"></script><script>crumb.init("", "");</script><link rel="stylesheet" type="text/css" href="/hudson/static/9db53190/scripts/yui/container/assets/container.css" /><link rel="stylesheet" type="text/css" href="/hudson/static/9db53190/scripts/yui/assets/skins/sam/skin.css" /><link rel="stylesheet" type="text/css" href="/hudson/static/9db53190/scripts/yui/container/assets/skins/sam/container.css" /><link rel="stylesheet" type="text/css" href="/hudson/static/9db53190/scripts/yui/button/assets/skins/sam/button.css" /><link rel="stylesheet" type="text/css" href="/hudson/static/9db53190/scripts/yui/menu/assets/skins/sam/menu.css" /><link title="Hudson" rel="search" type="application/opensearchdescription+xml" href="/hudson/opensearch.xml" /><meta name="ROBOTS" content="INDEX,NOFOLLOW" /><link title="Hudson:browser_compile (all builds)" rel="alternate" type="application/rss+xml" href="rssAll" /><link title="Hudson:browser_compile (all builds) (RSS 2.0)" rel="alternate" type="application/rss+xml" href="rssAll?flavor=rss20" /><link title="Hudson:browser_compile (failed builds)" rel="alternate" type="application/rss+xml" href="rssFailed" /><link title="Hudson:browser_compile (failed builds) (RSS 2.0)" rel="alternate" type="application/rss+xml" href="rssFailed?flavor=rss20" /><link title="Hudson:browser_compile (changelog)" rel="alternate" type="application/rss+xml" href="rssChangelog" /><link title="Hudson:browser_compile (changelog) (RSS 2.0)" rel="alternate" type="application/rss+xml" href="rssChangelog?flavor=rss20" /></head><body class="yui-skin-sam"><a href="#skip2content" class="skiplink">Skip to content</a><table id="header" cellpadding="0" cellspacing="0" width="100%" border="0"><tr><td id="top-panel" colspan="2"><table cellpadding="0" cellspacing="0" width="100%" border="0"><tr><td style="font-weight:bold; font-size: 2em;"><a href="/hudson/"><img alt="title" src="/hudson/static/9db53190/images/title.png" /></a></td><td style="vertical-align: middle; text-align: right; padding-right: 1em;"><form style="position:relative;" name="search" action="/hudson/view/Browser_Trunk/job/browser_compile/search/" class="no-json" method="get"><div id="search-box-minWidth"></div><div id="search-box-sizer"></div><div id="searchform"><input name="q" value="search" id="search-box" class="has-default-text defaulted" />?<a href="http://wiki.hudson-ci.org/display/HUDSON/Search+Box"><img alt="help for search" src="/hudson/static/9db53190/images/16x16/help.png" /></a><div id="search-box-completion"></div><script>createSearchBox("/hudson/view/Browser_Trunk/job/browser_compile/search/");</script></div></form></td><td id="login-field"><span>?<script type="text/javascript">function showLoginDialog(){
+            jQuery.blockUI({
+              message: jQuery('#loginDialog'),
+              css: { 
+                width: '350px', 
+              },
+              title:  'Confirmation',
+            });
+	}
+        
+        function submitForm(){
+            jQuery('#loginMsg').css({ opacity: 1.0 });
+            jQuery('#loginError').css({ opacity: 0.0 });
+            var dataString = jQuery("#loginForm").serialize();
+            jQuery.ajax({
+              type: 'POST',
+              url: "/hudson/j_acegi_security_check",
+              data: dataString,
+              success: function(){
+                window.location.href="/hudson/view/Browser_Trunk/job/browser_compile/";
+              },
+              error: function(){
+                jQuery('#loginError').css({ opacity: 1.0 });
+                jQuery('#loginMsg').css({ opacity: 0.0 });
+              },
+              dataType: "html"
+            }); 
+        }
+
+        jQuery(document).ready(function() {
+        
+            jQuery('#j_username').keypress(function(e){
+              if(e.which == 13){
+                submitForm();
+              }
+            });
+            
+            jQuery('#j_password').keypress(function(e){
+              if(e.which == 13){
+                submitForm();
+              }
+            });
+
+
+            jQuery('#loginButton').click(function() {
+                 submitForm();
+            });
+            
+
+            jQuery('#cancelButton').click(function() {
+                jQuery.unblockUI();
+                jQuery('#j_username').attr({value:""});
+                jQuery('#j_password').attr({value:""});
+                jQuery('#loginError').css({ opacity: 0.0 });
+                jQuery('#loginMsg').css({ opacity: 0.0 });
+                return false;
+            });
+
+        });</script><a onclick="showLoginDialog(); return false;" href="/hudson/login?from=%2Fhudson%2Fview%2FBrowser_Trunk%2Fjob%2Fbrowser_compile%2F"><b>log in</b></a><div id="loginDialog" style="display:none; cursor: default"><style type="text/css">
+        #loginForm input {
+            width: 150px;
+        }
+    </style><div style="margin: 2em;"><form id="loginForm" style="text-size:smaller"><table><tr><td>User:</td><td><input type="text" name="j_username" id="j_username" /></td></tr><tr><td>Password:</td><td><input type="password" name="j_password" id="j_password" /></td></tr><tr><td align="right"><input style="width:10px" id="remember_me" type="checkbox" name="remember_me" /></td><td><label for="remember_me">Remember me on this computer</label></td></tr></table><input name="from" value="/hudson/view/Browser_Trunk/job/browser_compile/" type="hidden" /><input id="loginButton" style="width:75px" value="Login" type="button" /><input id="cancelButton" style="margin-left:10px; width:75px" value="Cancel" type="button" /><script>
+            $('j_username').focus();
+            </script></form><div id="loginError" style="opacity:0.0; text-align:center; color:red; font-weight:bold">Invalid login information. Please try again.</div><div id="loginMsg" style="opacity:0.0; text-align:center; color:black; font-weight:bold">Logging in...</div><div style="margin-top:2em"><a href="/hudson/signup">Create an account</a> if you are not a member yet.</div></div></div>
+    |
+    <a href="/hudson/signup"><b>sign up</b></a></span></td></tr></table></td></tr><tr id="top-nav"><td id="left-top-nav"><a href="/hudson/">Hudson</a> ? <a href="/hudson/view/Browser_Trunk/">Browser_Trunk</a> ? <a href="/hudson/view/Browser_Trunk/job/browser_compile/">browser_compile</a></td><td id="right-top-nav"><span class="smallfont"><a href="?auto_refresh=true">ENABLE AUTO REFRESH</a></span></td></tr></table><table id="main-table" height="70%" style="background-image: url(/hudson/static/9db53190/images/hudson.png);                background-repeat: no-repeat; background-position: bottom left;" width="100%" border="0"><tr><td id="side-panel" width="20%"><div style="margin-left: 20px; margin-right: 20px; border-top: 1px solid #bbb"></div><div id="navigation"><div id="tasks"><div class="task"><a href="/hudson/"><img height="24" style="margin: 2px;" alt="" width="24" src="/hudson/static/9db53190/images/24x24/up.gif" /></a>?<a href="/hudson/">Back to Dashboard</a></div><div class="task"><a href="/hudson/view/Browser_Trunk/job/browser_compile/"><img height="24" style="margin: 2px;" alt="" width="24" src="/hudson/static/9db53190/images/24x24/search.gif" /></a>?<a href="/hudson/view/Browser_Trunk/job/browser_compile/"><b>Status</b></a><div class="subtasks"></div></div><div class="task"><a href="/hudson/view/Browser_Trunk/job/browser_compile/changes"><img height="24" style="margin: 2px;" alt="" width="24" src="/hudson/static/9db53190/images/24x24/notepad.gif" /></a>?<a href="/hudson/view/Browser_Trunk/job/browser_compile/changes">Changes</a></div><script>function build(a) {
+              new Ajax.Request(a.href);
+              
+              hoverNotification('Build scheduled',a.parentNode);
+              return false;
+            }</script><div class="task"><a href="/hudson/view/Browser_Trunk/job/browser_compile/promotion"><img height="24" style="margin: 2px;" alt="" width="24" src="/hudson/static/9db53190/images/24x24/star.gif" /></a>?<a href="/hudson/view/Browser_Trunk/job/browser_compile/promotion">Promotion Status</a></div><div class="task"><a href="/hudson/view/Browser_Trunk/job/browser_compile/scmPollLog"><img height="24" style="margin: 2px;" alt="" width="24" src="/hudson/static/9db53190/images/24x24/clipboard.gif" /></a>?<a href="/hudson/view/Browser_Trunk/job/browser_compile/scmPollLog">Subversion Polling Log</a></div></div><table id="buildHistory" class="pane"><tr><td colspan="3" class="pane-header"><div style="float:right">(<a href="/hudson/view/Browser_Trunk/job/browser_compile/buildTimeTrend">trend</a>)</div><div data="80" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="/hudson/view/Browser_Trunk/job/browser_compile/lastBuild"><img alt="80%" src="/hudson/static/9db53190/images/16x16/health-60to79.gif"/></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/9db53190/images/16x16/health-60to79.gif"/></td><td>Build stability: 1 out of the last 5 builds failed.</td><td align="right">80</td></tr><tr><td align="left"><img title="" alt="" src="/hudson/static/9db53190/images/16x16/health-80plus.gif"/></td><td>Test Result: 0 tests in total.</td><td align="right">100</td></tr></tbody></table></div></div>Build History</td></tr><tr class="build-row no-wrap transitive"><td><img height="16" alt="In progress" width="16" src="/hudson/static/9db53190/images/16x16/blue_anime.gif" tooltip="In progress" />?
+      #10973
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10973/">Aug 6, 2012 5:34:54 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10973/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="transitive"><td></td><td colspan="2" style="padding:0"><table class="middle-align"><tr><td><table style="cursor:pointer" class="progress-bar " href="/hudson/view/Browser_Trunk/job/browser_compile/10973/console" tooltip="Started 3 min 57 sec ago&lt;br&gt; Estimated remaining time: 13 min"><tbody><tr><td style="width:22%;" class="progress-bar-done"></td><td style="width:78%" class="progress-bar-left"></td></tr></tbody></table></td><td style="padding:0"></td></tr></table></td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10972
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10972/">Aug 6, 2012 5:06:19 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10972/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?<a href="/hudson/view/Browser_Trunk/job/browser_compile/10972/promotion/"><img title="deploy test" height="16" width="16" src="/hudson/plugin/promoted-builds/icons/16x16/star-orange.gif" /></a></td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10971
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10971/">Aug 6, 2012 4:52:04 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10971/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10970
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10970/">Aug 6, 2012 4:31:52 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10970/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10969
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10969/">Aug 6, 2012 4:17:01 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10969/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Failed" width="16" src="/hudson/static/9db53190/images/16x16/red.png" tooltip="Failed" />?
+      #10968
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10968/">Aug 6, 2012 4:08:55 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10968/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Failed" width="16" src="/hudson/static/9db53190/images/16x16/red.png" tooltip="Failed" />?
+      #10967
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10967/">Aug 6, 2012 3:51:19 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10967/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10966
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10966/">Aug 6, 2012 3:30:37 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10966/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10965
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10965/">Aug 6, 2012 3:13:03 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10965/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Failed" width="16" src="/hudson/static/9db53190/images/16x16/red.png" tooltip="Failed" />?
+      #10964
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10964/">Aug 6, 2012 3:03:42 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10964/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10963
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10963/">Aug 6, 2012 2:39:46 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10963/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10962
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10962/">Aug 6, 2012 2:21:57 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10962/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10961
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10961/">Aug 6, 2012 2:07:52 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10961/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10960
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10960/">Aug 6, 2012 1:47:53 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10960/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10959
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10959/">Aug 6, 2012 12:18:25 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10959/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10958
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10958/">Aug 6, 2012 11:56:17 AM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10958/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10957
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10957/">Aug 6, 2012 11:41:52 AM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10957/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10956
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10956/">Aug 6, 2012 11:21:54 AM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10956/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10955
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10955/">Aug 6, 2012 11:02:53 AM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10955/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10954
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10954/">Aug 6, 2012 10:44:52 AM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10954/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10953
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10953/">Aug 6, 2012 10:14:51 AM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10953/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10952
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10952/">Aug 6, 2012 9:23:53 AM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10952/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10951
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10951/">Aug 4, 2012 5:54:37 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10951/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10950
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10950/">Aug 4, 2012 5:37:26 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10950/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10949
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10949/">Aug 4, 2012 5:23:01 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10949/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10948
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10948/">Aug 4, 2012 5:00:53 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10948/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10947
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10947/">Aug 4, 2012 4:18:51 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10947/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10946
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10946/">Aug 3, 2012 8:42:54 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10946/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10945
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10945/">Aug 3, 2012 7:39:53 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10945/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row no-wrap "><td><img height="16" alt="Success" width="16" src="/hudson/static/9db53190/images/16x16/blue.png" tooltip="Success" />?
+      #10944
+    </td><td style="padding-right:0"><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10944/">Aug 3, 2012 6:49:53 PM</a></td><td><a class="tip" href="/hudson/view/Browser_Trunk/job/browser_compile/10944/console"><img alt="Console output" src="/hudson/static/9db53190/images/16x16/terminal.gif" border="0" /></a></td><td class="middle-align">?</td></tr><tr class="build-row"><td colspan="3" align="right"><script>
+            function loadAllBuildHistory() {
+              // first display the "loading..." icon
+              var box = $("loadAllBuildHistory");
+              box.innerHTML = '<img alt="" src="/hudson/static/9db53190/images/spinner.gif" />';
+
+              // then actually fetch the HTML
+              new Ajax.Request("/hudson/view/Browser_Trunk/job/browser_compile/buildHistory/all",{
+                method: "get",
+                onComplete: function(rsp,_) {
+                  
+                  var hist = $("buildHistory");
+                  var p = hist.parentNode;
+                  var next = hist.nextSibling;
+                  p.removeChild(hist);
+
+                  var div = document.createElement('div');
+                  div.innerHTML = rsp.responseText;
+
+                  p.insertBefore(div,next);
+                }
+            });
+            }
+          </script><div id="loadAllBuildHistory"><a href="javascript:loadAllBuildHistory()">More ...</a></div></td></tr><tr class="build-row"><td colspan="3" align="right"><a href="/hudson/view/Browser_Trunk/job/browser_compile/rssAll"><img alt="Feed" src="/hudson/static/9db53190/images/atom.gif" border="0" /> for all</a>?<a href="/hudson/view/Browser_Trunk/job/browser_compile/rssFailed"><img alt="Feed" src="/hudson/static/9db53190/images/atom.gif" border="0" /> for failures</a></td></tr></table><script defer="true">updateBuildHistory("/hudson/view/Browser_Trunk/job/browser_compile/buildHistory/ajax",10973);</script></div></td><td id="main-panel-container" width="80%" height="100%"><table width="100%" height="100%" border="0"><tr><td id="global-messages" width="100%"></td></tr><tr><td id="main-panel" width="100%" height="100%"><a name="skip2content"></a><h1>Project browser_compile</h1><div id="description"><div><h2><font color='red'>浏览器 主干 build 任务</font></h2>
+<font size= 5 color="blue">每次提交触发构建（包括buildonly和quick）</font><br>
+<font size= 2>当构建状态为成功（buildonly和quick两个都蓝灯）时，才可提交自己的代码</font><br>
+<font size= 2 color="red">提交代码后构建若失败，提交人点击这个失败构建，添加说明：失败原因+who正在跟进。</font><br>
+<font size= 2 color="red">提交人负责修复失败构建，半小时内解决不了请rollback</font><br>
+<font size= 2>每日23:00时，自动上传当前最新构建至<a href=http://tc-bar-safe03.tc.baidu.com:8080/browser-client/dailybuild/>dailybuild</a>，供PM体验和QA验证</font><br><br>
+<font size= 5 color="blue">提测版本生成流程（由RD负责人操作）</font><br>
+1.确定哪次构建作为提测版本<br>
+2.编辑设置->Promotion Process->Name为提测版本号<br>
+3.点击此构建->Promotion Status->找到相应的提测版本号->Force Promotion。
+   Hudson自动发信通知QA提测.<br>
+4.根据此次构建的revision号，在svn上打上相应的tag<br></div></div><div align="right"><form method="post" action="disable"></form></div><div style="float:right"></div><table style="margin-top: 1em; margin-left:1em;"><tr><td><a href="promotion"><img height="48" style="margin-right:1em" alt="" width="48" src="/hudson/static/9db53190/images/48x48/star.gif" /></a></td><td style="vertical-align:middle"><a href="promotion">Promotion Status</a></td></tr><tr><td><a><img height="48" style="margin-right:1em" alt="" width="48" src="/hudson/static/9db53190/images/48x48/package.gif" /></a></td><td style="vertical-align:middle"><a><a href="lastSuccessfulBuild/artifact/">Artifact(s) of the Last Successful Build</a></a></td></tr><tr><td><a href="changes"><img height="48" style="margin-right:1em" alt="" width="48" src="/hudson/static/9db53190/images/48x48/notepad.gif" /></a></td><td style="vertical-align:middle"><a href="changes">Recent Changes</a></td></tr><tr><td><a><img height="48" style="margin-right:1em" alt="" width="48" src="/hudson/static/9db53190/images/48x48/clipboard.gif" /></a></td><td style="vertical-align:middle"><a><a href="lastCompletedBuild/testReport/">Latest Test Results</a>?(no tests)</a></td></tr><tr><td><a href="lastBuild/console"><img height="48" style="margin-right:1em" alt="" width="48" src="/hudson/static/9db53190/images/48x48/terminal.gif" /></a></td><td style="vertical-align:middle"><a href="lastBuild/console">Latest Console output</a></td></tr></table><h2>Downstream Projects</h2><ul style="list-style-type: none;"><li><img alt="Unstable" src="/hudson/static/9db53190/images/16x16/yellow.png" /><a href="/hudson/job/browser_html5_test/">browser_html5_test</a></li><li><img alt="Failed" src="/hudson/static/9db53190/images/16x16/red.png" /><a href="/hudson/job/browser_performance_function_level/">browser_performance_function_level</a></li><li><img alt="Disabled" src="/hudson/static/9db53190/images/16x16/grey.png" /><a href="/hudson/job/browser_performance_quick_start/">browser_performance_quick_start</a></li><li><img alt="Disabled" src="/hudson/static/9db53190/images/16x16/grey.png" /><a href="../../job/browser_publish_check/">browser_publish_check</a></li><li><img alt="Success" src="/hudson/static/9db53190/images/16x16/blue.png" /><a href="../../job/browser_quick/">browser_quick</a></li></ul><h2>Permalinks</h2><ul><li><a href="lastBuild/">Last build (#10973), 3 min 57 sec ago</a></li><li><a href="lastStableBuild/">Last stable build (#10972), 32 min ago</a></li><li><a href="lastSuccessfulBuild/">Last successful build (#10972), 32 min ago</a></li><li><a href="lastFailedBuild/">Last failed build (#10968), 1 hr 29 min ago</a></li><li><a href="lastUnsuccessfulBuild/">Last unsuccessful build (#10968), 1 hr 29 min ago</a></li><li><a href="deploy test/">Latest promotion:deploy test (#10972), 32 min ago</a></li></ul></td></tr></table></td></tr></table><table width="100%"><tr><td id="footer"><span style="padding-right:2em; color:gray">
+          Page generated:
+          Aug 6, 2012 5:38:51 PM</span><a href="http://hudson-ci.org/">Hudson ver. 2.1.1</a></td></tr></table></body></html>
